@@ -1,33 +1,95 @@
-.App {
-  text-align: center;
+:root{
+    --blue-horizon: #4b6584;
+    --black-orchid: #2d3436;
+    --lynx-white: #f5f6fa;
+    --alizarin: #e74c3c;
+    --soaring-eagle: #95afc0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .8rem 1rem;
+    background-color: var(--soaring-eagle);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo-wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+    width: 30px;
+    display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.brand{
+    display: inline-block;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.5rem;
+    color: var(--lynx-white);
+    margin: 0;
+    margin-left: .5rem;
+}
+
+#soflow-color {
+    color: #fff;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+    background-color: #779126;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding-left: 15px;
+ }
+
+.cart{
+    display: inline-block;
+    background: transparent;
+    background-color:var(--lynx-white);
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 3px 5px black;
+    padding: .5rem;
+    margin-right: 2rem;
+}
+
+.cart-logo{
+    display: inline-block;
+    max-width: 30px;
+}
+
+.product{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.product-thumbnail{
+    height: 50vh;
+}
+
+.product-name{
+    display: inline-block;
+    margin: .25rem 0;
+    align-self: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+}
+
+.price{
+    display: inline-block;
+    margin: .25rem 0;
+    align-self: center;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.2rem;
+    color: var(--alizarin);
+}
+
+.products-container{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
