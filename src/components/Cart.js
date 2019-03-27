@@ -27,6 +27,7 @@ class Cart extends Component {
     return (
       <div className="cart-container">
           <h3 className="cart-title">You have ordered:</h3>
+          <h3 className="total">{this.props.total}</h3>
           {addedItems}
       </div>
         
@@ -36,7 +37,8 @@ class Cart extends Component {
 
 const mapStateToProps = (state) =>{
   return {
-    items: state.addedItems
+    items: state.addedItems,
+    total: state.total
   } 
 }
 

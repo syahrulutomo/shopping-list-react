@@ -11,9 +11,11 @@ const cartReducer = (state = initState,action) => {
     switch(action.type){
         case 'ADD_TO_CART':
             let addedItem = state.items.find(item => item.id === action.payload);
+            let totalAddedItem = addedItem.price + state.total; 
             return { 
                 ...state, 
-                addedItems: [...state.addedItems, addedItem]
+                addedItems: [...state.addedItems, addedItem],
+                total: totalAddedItem
             }
         case 'REMOVE_FROM_CART':
             const objExist = state.addedItems.find( el => el.id === action.payload);
