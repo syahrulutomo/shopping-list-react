@@ -6,6 +6,7 @@
     --soaring-eagle: #95afc0;
 }
 
+/* Navbar */
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -51,20 +52,44 @@
     border-radius: 50%;
     border: none;
     box-shadow: 3px 3px 5px black;
-    padding: .5rem;
+    padding: .375rem;
     margin-right: 2rem;
 }
 
 .cart-logo{
     display: inline-block;
-    max-width: 30px;
+    max-width: 20px;
 }
 
+/* Product */
 .product{
     margin: 1rem 0;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.indicator{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    z-index: 100;
+    font-family: sans-serif;
+    font-size: .8rem;
+    background-color: var(--alizarin);
+    padding: .25rem;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+}
+
+.indicator-label{
+    display: inline-block;
+    margin: auto;
+    color: var(--lynx-white);
+    align-self: center;
 }
 
 .product-thumbnail{
@@ -73,7 +98,7 @@
 
 .product-name{
     display: inline-block;
-    margin: .25rem 0;
+    margin: .5rem 0;
     align-self: center;
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.3rem;
@@ -81,15 +106,90 @@
 
 .price{
     display: inline-block;
-    margin: .25rem 0;
+    margin: 0;
     align-self: center;
     font-family: 'Acme', sans-serif;
     font-size: 1.2rem;
     color: var(--alizarin);
 }
 
+.add-to-cart{
+    background-color: var(--black-orchid);
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.1rem;
+    color: var(--lynx-white);
+    padding: .35rem .5rem;
+    margin-top: 1rem;
+    border-radius: 5px; 
+    border: none;
+    width: 50%;
+    align-self: center;
+}
+
+.add-to-cart:hover{
+    background-color: var(--lynx-white);
+    color: var(--black-orchid);
+    cursor: pointer;
+    border: 1px solid var(--black-orchid);
+}
+
 .products-container{
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: center;
+    grid-gap: 1%;
 }
+
+/* Cart */
+.cart-title{
+    margin: .5rem 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    font-size: bold;
+}
+
+.remove-item{
+    width: 25px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.remove-item:hover{
+    cursor: pointer;
+}
+
+.added-item-thumbnail{
+    height: 25vh;
+}
+.added-item-name{
+    margin: .5rem 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.added-item-price{
+    margin: 0;
+    font-family: 'Acme', sans-serif;
+    font-size: .9rem;
+    text-align: center;
+    color: var(--alizarin);
+}
+
+.added-item{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.cart-container{
+    display: grid;
+    grid-template-columns: 50%;
+    padding: 1.3rem;
+}
+

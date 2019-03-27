@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Cart from './Cart';
 import {Link} from 'react-router-dom';
 import '.././App.css';
 
@@ -10,7 +9,7 @@ export default class Navbar extends Component {
         <div className="logo-wrapper">
           <Link to="/">
               <img className="logo" src={process.env.PUBLIC_URL + '/img/react-logo.png'}  alt="logo"/>
-              <h3 className="brand">Shoping Cart React</h3>
+              <h3 className="brand">Shopping Cart Demo</h3>
           </Link>
         </div>
         <Link  to="/cart">
@@ -18,7 +17,6 @@ export default class Navbar extends Component {
             <img className="cart-logo" src={process.env.PUBLIC_URL + "img/cart.png"} alt="brand logo" />
           </button>
         </Link>
-        <Cart/>
       </nav>
     );
   }
