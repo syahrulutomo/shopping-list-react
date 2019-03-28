@@ -12,10 +12,8 @@ export default class Navbar extends Component {
               <h3 className="brand">Shopping Cart Demo</h3>
           </Link>
         </div>
-        <Link  to="/cart">
-          <button className="cart">
+        <Link className="cart" to="/cart">
             <img className="cart-logo" src={process.env.PUBLIC_URL + "img/cart.png"} alt="brand logo" />
-          </button>
         </Link>
       </nav>
     );

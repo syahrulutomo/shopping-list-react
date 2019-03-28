@@ -11,6 +11,7 @@ class Cart extends Component {
     this.props.removeFromCart(id);
   }
   render() {
+    console.log(this.props.items);
     let addedItems = this.props.items.length > 0 ?
       (
         this.props.items.map(item => {
@@ -20,6 +21,10 @@ class Cart extends Component {
                 <img className="added-item-thumbnail" src={process.env.PUBLIC_URL + item.img} alt={item.name} />
                 <h3 className="added-item-name">{item.name}</h3>
                 <p className="added-item-price">{item.price}</p>
+                <div className="add-remove">
+                  <h3 className="qty">{item.quantity}</h3>
+                </div>
+                
               </div>
             )
         })

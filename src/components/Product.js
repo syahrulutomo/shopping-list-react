@@ -12,8 +12,6 @@ class Product extends Component {
     }
     render() {
         const item = this.props.item;
-        
-        ;
         return (
             <div className="product">
                 { 
@@ -26,7 +24,7 @@ class Product extends Component {
                 <img className="product-thumbnail" src={process.env.PUBLIC_URL + item.img} alt="" />
                 <h3 className="product-name">{item.name}</h3>
                 <p className="price">{item.price}</p>
-                <button className="add-to-cart" onClick={()=>this.handleClick(item.id)}>Add to cart</button>
+                    <button className="add-to-cart" onClick={()=>this.handleClick(item.id)}>Add to cart</button>
             </div>
         );
     }

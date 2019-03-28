@@ -38,7 +38,7 @@
 #soflow-color {
     color: #fff;
     background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
-    background-color: #779126;
+    background-color: ;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
@@ -47,13 +47,18 @@
 
 .cart{
     display: inline-block;
-    background: transparent;
     background-color:var(--lynx-white);
     border-radius: 50%;
     border: none;
     box-shadow: 3px 3px 5px black;
     padding: .375rem;
     margin-right: 2rem;
+}
+
+.cart:hover{
+    background-color: #779126;
+    color: var(--lynx-white);
+    cursor: pointer;
 }
 
 .cart-logo{
@@ -187,6 +192,13 @@
     font-size: .9rem;
     text-align: center;
     color: var(--alizarin);
+}
+
+.qty{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--black-orchid);
+    text-align: center;
 }
 
 .added-item{
